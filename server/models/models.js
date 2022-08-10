@@ -15,9 +15,13 @@ const Products = sequelize.define('products', {
 });
 
 const Orders = sequelize.define('orders', {
-  orderNumber: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  shop: { type: DataTypes.STRING},
-  dishesNameAndQuantity: { type: DataTypes.STRING },
+  orderNumber: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  shop: { type: DataTypes.STRING },
+  productsNameAndQuantity: { type: DataTypes.STRING },
   totalPrice: { type: DataTypes.STRING },
   userName: { type: DataTypes.STRING },
   userEmail: { type: DataTypes.STRING },

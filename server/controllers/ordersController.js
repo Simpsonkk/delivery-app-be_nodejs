@@ -4,7 +4,7 @@ class OrdersController {
   async setOrders(req, res) {
     const body = {
       ...req.body,
-      dishesNameAndQuantity: JSON.stringify(req.body.dishesNameAndQuantity),
+      productsNameAndQuantity: JSON.stringify(req.body.productsNameAndQuantity),
     };
     console.log('body', body);
     const orders = await Orders.create(body);
